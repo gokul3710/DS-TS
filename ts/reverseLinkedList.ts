@@ -65,17 +65,16 @@ class createList {
     }
 
 
-    printMiddle(head = this.head){
-        let mid = this.head
-        while(head){
-            head = head.next?.next
-            mid = mid?.next
-        }
+    // printMiddle(head = this.head){
+    //     let mid = this.head
+    //     while(head){
+    //         head = head.next?.next
+    //         mid = mid?.next
+    //     }
 
-        console.log(mid?.data);
+    //     console.log(mid?.data);
         
-
-    }
+    // }
 }
 
 let list = new createList(2)

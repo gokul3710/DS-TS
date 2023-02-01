@@ -27,9 +27,20 @@ class execution{
         this.head = new linkedList(data,this.head)
     }
 
-    addLast(data:number,head: node = this.head){
-        this.tail.next = new linkedList(data,null)
-        this.tail = this.tail.next
+    // addLast(data:number,head: node = this.head){
+    //     this.tail.next = new linkedList(data,null)
+    //     this.tail = this.tail.next
+    // }
+
+    addLast(data: number){
+        let head = this.head
+        let prev;
+        while(head!=null){
+            prev = head
+            head= head.next
+        }
+
+        prev.next = new linkedList(data,null)
     }
 
     display(){
@@ -81,6 +92,20 @@ class execution{
         prev.next = head.next
     }
 
+    displayIndex(index: number){
+        let count : number = 0 ;
+        let head  = this.head
+
+        while(count<index){
+            head = head.next
+            count++
+        }
+
+        console.log(head.data);
+        return
+
+    }
+
     displayTail(){
         console.log(this.tail);
     }
@@ -99,16 +124,14 @@ a.addFirst(5)
 a.addFirst(50)
 a.addLast(10)
 a.insertAfter(78,50)
-a.addLast(11),
+a.addLast(11)
 a.addLast(20)
-a.addFirst(10)
+a.addFirst(1)
 // a.deleteOne(50)
 // a.deleteOne(7)
 // a.deleteOne(78)
 a.insertAfter(78,11)
-a.displayTail()
-a.displayHead()
-// a.makeCircle()
+
+// a.displayOrder()
 a.displayOrder()
-a.display()
-a.displayTail()
+// a.makeCircle()

@@ -1,4 +1,4 @@
-let array =[1,3,9,5,2,4,8]
+let array =[9,3,1,5,2,4,8]
 for (let i = 1; i < array.length; i++) {
     let cur=array[i];
     let j=i-1
@@ -8,4 +8,4 @@ for (let i = 1; i < array.length; i++) {
     }
     array[j+1]=cur;
 }
-console.log(a);
+console.log(array);

@@ -84,6 +84,7 @@ graph.addVertex("A");
 graph.addVertex("B");
 graph.addVertex("C");
 graph.addEdge("A", "B");
+graph.addEdge("A", "B");
 graph.addEdge("B", "C");
 graph.addEdge("A", "C");
 graph.addEdge("A", "D");

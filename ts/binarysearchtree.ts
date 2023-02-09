@@ -64,15 +64,15 @@ class Bslist{
     }
 }
 
-let a = new Bslist()
-a.insert(50)
-a.insert(23)
-a.insert(54)
-a.insert(2)
-a.insert(4)
-a.insert(32)
-a.insert(23)
-a.find(32)
-console.log(a.root);
-console.log(a.traversal());
+let an = new Bslist()
+an.insert(50)
+an.insert(23)
+an.insert(54)
+an.insert(2)
+an.insert(4)
+an.insert(32)
+an.insert(23)
+an.find(32)
+console.log(an.root);
+console.log(an.traversal());
 

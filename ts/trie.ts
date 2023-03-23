@@ -47,4 +47,40 @@ class Trie {
         }
         return true;
     }
+
+    prefix(pre: string): string[] {
+        let values: string[] = []
+        let stack: string[] = []
+        let current = this.root;
+        for (const char of pre) {
+            if (!current.children.has(char)) {
+                return [];
+            }
+            current = current.children.get(char)!;
+        }
+        console.log(current.children);
+        for (const letter of current.children) {
+            // console.log(letter[0]);
+            values.push(this.String(current.children.get(letter[0])!, pre,letter[0]))
+        }
+
+        console.log(values);
+        
+        return values
+    }
+
+    String(node: TrieNode, str: string,letter: string): string  {
+        str+=letter
+        for(const letter of node.children){
+            return this.String(node.children.get(letter[0])!,str,letter[0]) 
+        }
+        return str
+    }
 }
+
+let trie = new Trie()
+trie.insert("Gokul")
+trie.insert("Gopal")
+trie.insert("Gowri")
+trie.insert("Gautham")
+trie.prefix("Go")
